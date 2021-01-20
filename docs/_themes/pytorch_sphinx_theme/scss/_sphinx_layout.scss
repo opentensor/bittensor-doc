@@ -1,0 +1,618 @@
+.pytorch-container {
+  margin: 0 auto;
+  padding: 0 rem(30px);
+  width: 100%;
+  @include full-nav-menu-desktop {
+    padding: 0;
+  }
+}
+
+.pytorch-content-wrap {
+  background-color: #ffffff;
+  display: flex;
+  position: relative;
+  @include clearfix;
+
+  @include sphinx-medium-size {
+    left: $sphinx_content_wrap_left_margin;
+    padding-top: 160px;
+    width: $sphinx_content_wrap_width;
+  }
+
+  @include sphinx-full-size {
+    left: auto;
+    margin-left: $desktop_menu_width + 60px;
+    padding-top: 220px;
+    width: auto;
+  }
+}
+
+.pytorch-content {
+  background: #ffffff;
+  width: 100%;
+  max-width: $sphinx_full_width_content_width;
+  position: relative;
+}
+
+.pytorch-content-left {
+  margin-top: rem(40px);
+  width: 100%;
+
+  @include sphinx-medium-size {
+    margin-top: 0;
+    width: $sphinx_article_width;
+  }
+
+  @include sphinx-full-size {
+    width: $sphinx_full_width_content_width;
+  }
+
+  .main-content {
+    padding-top: rem(15px);
+    ul.simple {
+      padding-bottom: rem(20px);
+    }
+    .note, .warning {
+      &:nth-child(1) {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+.pytorch-content-right {
+  display: none;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
+
+  &.show {
+    display: none;
+  }
+
+  @include sphinx-medium-size {
+    left: $sphinx_right_menu_wrap_left_margin;
+    width: $sphinx_right_menu_wrap_width;
+
+    &.show {
+      display: block;
+    }
+  }
+
+  @include sphinx-full-size {
+    width: $desktop_menu_width - 70px;
+    left: 0;
+    top: 0;
+  }
+}
+
+.pytorch-side-scroll {
+  @include sphinx-medium-size {
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 100%;
+  }
+}
+
+.pytorch-menu-vertical {
+  padding: rem(20px) rem(30px) rem(40px) rem(30px);
+
+  @include sphinx-medium-size {
+    display: block;
+    padding-top: 0;
+    padding-right: $sphinx_left_menu_wrapper_padding_right;
+    padding-bottom: rem(90px);
+  }
+
+  @include sphinx-full-size {
+    padding-right: rem(65px);
+  }
+}
+
+.pytorch-left-menu {
+  display: none;
+  background-color: $light_grey;
+  color: $slate;
+
+  @include sphinx-medium-size {
+    bottom: 0;
+    left: 0;
+    display: block;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding-bottom: 20px + 90px;
+    padding: 0 rem(30px) 0 0;
+    position: fixed;
+    top: 90px;
+    width: $sphinx_left_menu_width;
+    z-index: 200;
+  }
+
+  @include sphinx-full-size {
+    padding: 0 0 0 rem(30px);
+    width: $desktop_menu_width;
+  }
+}
+
+.pytorch-left-menu p.caption {
+  color: $not_quite_black;
+  display: block;
+  display: inline-block;
+  font-size: rem(18px);
+  line-height: rem(34px);
+  margin-bottom: rem(16px);
+  padding: 0;
+  text-transform: none;
+  white-space: nowrap;
+}
+
+.pytorch-left-menu-search {
+  margin-bottom: rem(40px);
+
+  @include sphinx-medium-size {
+    margin: rem(20px) 0 rem(30px) 0;
+  }
+
+  @include sphinx-full-size {
+    margin: rem(40px) 0;
+  }
+}
+
+.pytorch-left-menu-search {
+  ::-webkit-input-placeholder {
+    color: $not_quite_black;
+  }
+
+  ::-moz-placeholder {
+    color: $not_quite_black;
+  }
+
+  :-ms-input-placeholder {
+    color: $not_quite_black;
+  }
+
+  :-moz-placeholder {
+    color: $not_quite_black;
+  }
+
+  ::placeholder {
+    color: $not_quite_black;
+  }
+}
+
+.pytorch-left-menu-search input[type=text] {
+  border-radius: 0;
+  padding: rem(8px) rem(12px);
+  border-color: $red_orange;
+  color: $not_quite_black;
+  border-style: solid;
+  font-size: rem(16px);
+  width: 100%;
+  background-color: $light_grey;
+  text-align: center;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.pytorch-left-menu .pytorch-side-scroll {
+  @include sphinx-medium-size {
+    width: $sphinx_left_menu_scroll_wrapper_width;
+  }
+
+  @include sphinx-full-size {
+    width: 410px;
+  }
+}
+
+.pytorch-right-menu {
+  min-height: 100px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  padding-top: 0;
+  bottom: auto;
+  will-change: bottom;
+
+  @include sphinx-medium-size {
+    left: $sphinx_right_menu_left_margin;
+    width: $sphinx_right_menu_width;
+  }
+
+  @include sphinx-full-size {
+    left: 1200px;
+    width: 380px;
+  }
+}
+
+.pytorch-left-menu,
+.pytorch-right-menu {
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: rem(40px);
+  }
+
+  > ul {
+    margin-bottom: rem(40px);
+  }
+
+  a:link,
+  a:visited,
+  a:hover {
+    color: $quick_start_grey;
+    font-size: rem(16px);
+    line-height: rem(25px);
+    padding: 0;
+    text-decoration: none;
+    &.reference.internal {
+      margin-bottom: rem(5px);
+      position: relative;
+    }
+  }
+
+  li {
+    &.divide-top {
+    }
+
+    &.divide-bottom {
+    }
+
+    &.current {
+      a {
+        &:hover {
+        }
+      }
+    }
+
+    code {
+      border: none;
+      background: inherit;
+      color: inherit;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    // Expand links
+    span.toctree-expand {
+      display: block;
+      float: left;
+      margin-left: -1.2em;
+
+      font-size: 0.8em;
+      line-height: 1.6em;
+    }
+  }
+
+  // On state for the first level
+  li.on a, li.current > a {
+    position: relative;
+    border: none;
+
+    &:hover {
+      span.toctree-expand {
+      }
+    }
+
+    span.toctree-expand {
+      display: block;
+      font-size: 0.8em;
+      line-height: 1.6em;
+    }
+  }
+
+  li.toctree-l1.current > a {
+    color: $red_orange;
+    &:before {
+      content: "\2022";
+      display: inline-block;
+      position: absolute;
+      left: -15px;
+      top: 1px;
+      font-size: rem(22px);
+      color: $red_orange;
+
+      @include sphinx-medium-size {
+        left: -20px;
+      }
+    }
+  }
+
+  // This is the on state for pages beyond second level
+  li.toctree-l2 a, li.toctree-l3 a, li.toctree-l4 a {
+  }
+
+  li.toctree-l1.current li.toctree-l2, li.toctree-l2.current li.toctree-l3 {
+    > ul {
+      display: none;
+    }
+
+    &.current > ul {
+      display: block;
+    }
+  }
+
+  li.toctree-l2 {
+    &.current {
+      > a {
+      }
+
+      li.toctree-l3 > a {
+        display: block;
+      }
+    }
+
+    a:hover span.toctree-expand {
+    }
+
+    span.toctree-expand {
+    }
+  }
+
+  li.toctree-l3 {
+    font-size: 0.9em;
+
+    &.current {
+      > a {
+      }
+
+      li.toctree-l4 > a {
+        display: block;
+      }
+    }
+
+    a:hover span.toctree-expand {
+    }
+
+    span.toctree-expand {
+    }
+  }
+
+  li.toctree-l4 {
+    font-size: 0.9em;
+  }
+
+  li.current ul {
+    display: block;
+  }
+
+  li ul {
+    margin-bottom: 0;
+    display: none;
+  }
+
+  li ul li a {
+    margin-bottom: 0;
+  }
+
+  a {
+    display: inline-block;
+    position: relative;
+
+    &:hover {
+      cursor: pointer;
+
+      span.toctree-expand {
+      }
+    }
+
+    &:active {
+      cursor: pointer;
+      span.toctree-expand {}
+    }
+  }
+}
+
+.pytorch-left-menu ul {
+  padding-left: 0;
+}
+
+.pytorch-right-menu {
+  a:link,
+  a:visited,
+  a:hover {
+    color: $quick_start_grey;
+
+    span.pre {
+      color: $quick_start_grey;
+    }
+  }
+
+  li.active > a {
+    color: $red_orange;
+
+    span.pre,
+    &:before {
+      color: $red_orange;
+    }
+
+    &:after {
+      content: "\2022";
+      color: $orange;
+      display: inline-block;
+      font-size: rem(22px);
+      left: -17px;
+      position: absolute;
+      top: 1px;
+    }
+  }
+
+  .pytorch-side-scroll > ul > li > ul > li {
+    margin-bottom: rem(22px);
+  }
+
+  ul ul {
+    padding-left: 0;
+
+    li {
+      padding-left: 0px;
+
+      a.reference.internal {
+        padding-left: 0;
+      }
+
+      li {
+          a.reference.internal {
+            padding-left: 0;
+
+            &:before {
+              content: "\2014";
+            }
+          }
+
+        li {
+          a.reference.internal {
+            padding-left: 15px;
+          }
+
+          li {
+            a.reference.internal {
+              padding-left: 20px;
+            }
+
+            li {
+              a.reference.internal {
+                padding-left: 25px;
+              }
+
+              li {
+                a.reference.internal {
+                  padding-left: 30px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  li ul {
+    display: block;
+  }
+}
+
+.pytorch-right-menu .pytorch-side-scroll {
+  @include sphinx-medium-size {
+    width: $sphinx_right_menu_scroll_wrapper_width;
+  }
+
+  @include sphinx-full-size {
+    width: $desktop_menu_width + 20px;
+  }
+
+  padding-top: 20px;
+
+  > ul {
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-bottom: 0;
+    > li > a.reference.internal {
+      color: $slate;
+    }
+  }
+
+  ul li {
+    position: relative;
+  }
+}
+
+.header-container {
+  max-width: none;
+  margin-top: 4px;
+  @include sphinx-medium-size {
+    margin-top: 0;
+  }
+  @include sphinx-full-size {
+    margin-top: 0;
+  }
+}
+
+.container-fluid.header-holder {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.header-holder .container {
+  max-width: none;
+  padding-right: rem(30px);
+  padding-left: rem(30px);
+
+  @include sphinx-medium-size {
+    padding-right: rem(30px);
+    padding-left: rem(30px);
+  }
+
+  @include sphinx-full-size {
+    padding-right: rem(60px);
+    padding-left: rem(60px);
+  }
+}
+
+.header-holder .main-menu {
+  justify-content: unset;
+  position: relative;
+
+  @include sphinx-medium-size {
+    left: 26%;
+    ul {
+      padding-left: 0;
+    }
+  }
+
+  @include sphinx-full-size {
+    left: 380px;
+    ul {
+      padding-left: 38px;
+    }
+  }
+}
+
+.pytorch-page-level-bar {
+  display: none;
+  align-items: center;
+  background-color: $white;
+  border-bottom: 1px solid #e2e2e2;
+  top: 90px;
+  width: 100%;
+  z-index: 201;
+
+  @include sphinx-medium-size {
+    left: $sphinx_page_bar_left_margin;
+    display: flex;
+    position: fixed;
+    height: $desktop_header_height / 2;
+    padding-left: $sphinx_page_bar_left_padding;
+    width: 100% - $sphinx_page_bar_left_margin;
+  }
+
+  @include sphinx-full-size {
+    left: 420px;
+    height: $desktop_header_height;
+    padding-left: 60px;
+    right: 0;
+    width: 100%;
+  }
+
+  ul, li {
+    margin: 0;
+  }
+}
+
+.pytorch-shortcuts-wrapper {
+  display: none;
+  position: absolute;
+
+  @include sphinx-medium-size {
+    left: $sphinx_shortcuts_left_margin;
+  }
+
+  @include sphinx-full-size {
+    left: 820px;
+  }
+}

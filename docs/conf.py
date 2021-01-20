@@ -89,15 +89,10 @@ html_static_path = ['_static']
 # default: ``['localtoc.html', 'relations.html', 'sourcelink.html',
 # 'searchbox.html']``.
 #
-html_theme = "furo"
-html_context = {
-  "display_github": True,
-  "github_user": "crate",
-  "github_repo": "crate-docs-theme",
-  "github_version": "master",
-  "conf_py_path": "/docs/",
-  "source_suffix": source_suffix,
-}
+
+html_theme = 'pytorch_sphinx_theme'
+html_theme_path = ["_themes/pytorch_sphinx_theme",]
+
 
 autosectionlabel_prefix_document = True
 autosectionlabel_maxdepth = 4

@@ -1,0 +1,22 @@
+<svg width="1600" height="320" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+
+ <g>
+  <title>background</title>
+  <rect fill="#fff" id="canvas_background" height="322" width="1602" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <metadata transform="matrix(0.16000000476837162,0,0,0.16000000476837162,0,0) ">Created by potrace 1.16, written by Peter Selinger 2001-2019</metadata>
+  <metadata transform="matrix(0.6400000190734865,0,0,0.6400000190734865,0,0) ">Created by potrace 1.16, written by Peter Selinger 2001-2019</metadata>
+  <g stroke="null" id="svg_30">
+   <g id="svg_28" fill="#000000" transform="matrix(0.1764285223899828,0,0,-0.14615962580787956,-487.4898666390613,236.31165399598143) ">
+    <path stroke="null" id="svg_29" d="m4576.24012,1555.69081c-13,-34 -70,-64 -134,-70c-25,-2 -281,3 -570,12c-555,16 -614,14 -713,-28c-123,-51 -200,-176 -233,-376c-19,-116 -20,-110 29,-110c42,0 43,1 60,50c26,72 69,117 130,135c52,15 340,22 405,9l31,-6l4,-662c3,-593 5,-667 21,-720c66,-225 218,-336 461,-336c227,0 369,111 431,337c9,34 18,119 21,206l6,147l-50,0l-50,0l-7,-120c-17,-281 -90,-404 -246,-412c-71,-4 -93,2 -130,40c-75,75 -74,61 -78,829l-3,683l218,-3c237,-2 263,2 339,54c75,51 139,180 151,307l6,62l-44,0c-40,0 -46,-3 -55,-28z"/>
+   </g>
+  </g>
+  <text font-style="normal" font-weight="normal" xml:space="preserve" text-anchor="start" font-family="'Open Sans SemiBold'" font-size="250" id="svg_31" y="244.33333" x="446.33333" stroke-width="0" stroke="#000" fill="#000000">Bittensor</text>
+ </g>
+</svg>
